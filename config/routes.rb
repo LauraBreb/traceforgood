@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'static_pages/index'
+  get 'static_pages/phase0'
+  get 'static_pages/phase1'
+  get 'static_pages/phase2'
+  get 'static_pages/phase3'
+  get 'static_pages/phase4'
+  root 'static_pages#index'
+  
+  devise_for :users
+
+  
+
 end
