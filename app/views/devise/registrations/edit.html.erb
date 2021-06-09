@@ -4,16 +4,6 @@
   <%= render "devise/shared/error_messages", resource: resource %>
   
   <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name" %>
-  </div>
-
-  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -23,7 +13,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+   <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
@@ -37,31 +27,6 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :mobile_phone %><br />
-    <%= f.text_field :mobile_phone, autofocus: true, autocomplete: "mobile phone" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :company_name %><br />
-    <%= f.text_field :company_name, autofocus: true, autocomplete: "company name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :company_proof %><br />
-    <%= f.text_field :company_proof, autofocus: true, autocomplete: "company website link, linkedin link or SIREN number" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :company_type %><br />
-    <%= f.select :company_type, ["Select a category", "Brand", "Textile supply chain player", "CSR 3rd party tool or application", "Other brand supplier (e.g. logistic, packaging)", "Other"] %>
-  </div>
-
-  <div class="field">
-    <%= f.label :company_position %><br />
-    <%= f.text_field :company_position, autofocus: true, autocomplete: "company position" %>
-  </div> <br />
-  
   <div class="actions">
     <%= f.submit "Update" %>
   </div>

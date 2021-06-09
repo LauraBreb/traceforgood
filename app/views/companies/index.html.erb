@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Join or Register your company</h1>
+<i>To complete your registration you need first to join or register a company</i>
+
+
+<p> Create a company profile </p>
+<%= link_to 'Register a new company', new_company_path %> <br/>
+ 
+<p> Join a registered company </p>
+
+<% @companies.each do |company| %>
+    <strong><%= company.name %></strong>
+    <%= link_to 'Join', company, :style =>"display:inline"%> <br/>
+<% end %>
+

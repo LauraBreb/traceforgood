@@ -11,4 +11,13 @@ class UserMailer < ApplicationMailer
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @user.email, subject: '') 
   end
+
+  def new_registration_email(admin , user, company)
+    @admin = admin
+    @company = company
+    @user = user
+
+    mail(to: @admin.email, subject: "#{@user.first_name} #{@user.last_name} has joined #{@company.name} on the TraceForGood platform")
+
+  end
 end

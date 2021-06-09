@@ -1,0 +1,29 @@
+<h2>Edit</h2>
+
+<%= form_for(current_user, url: company_user_path) do |f| %>
+  
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mobile_phone %><br />
+    <%= f.text_field :mobile_phone, autofocus: true, autocomplete: "mobile phone" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company_job_title %><br />
+    <%= f.text_field :company_job_title, autofocus: true, autocomplete: "company position" %>
+  </div> <br />
+
+  <div class="actions">
+    <%= f.submit "Register my profile" %>
+  </div>
+
+<% end %>

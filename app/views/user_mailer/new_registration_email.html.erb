@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= @admin.first_name %>, you have a new co-worker on the Trace For Good platform !</h1>
+    <p>
+      <%= @user.first_name%> <%= @user.last_name%> has registered on Trace For Good by joining the tracability project of <%= @company.name%>
+    </p>
+    <p>
+    If you do not know this person, we recommand you to cancel his or her registration by cliking on <%= link_to "this link", @company %> and then on the associated "cancel" button
+    </p>
+    <p>
+    You can also reach him by email: <%= @user.email%> or by phone: <%= @user.mobile_phone%>
+    </p>
+    <p> Laura from TraceForGood</p>
+  </body>
+</html>

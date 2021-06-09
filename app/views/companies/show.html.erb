@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @company.name %>
+</p>
+
+<% if current_user.company_id == nil%>
+  <p> Now you have joined your company you can complete your user profile </p>
+  <%= link_to 'Complete your user profile', edit_company_user_path(@company.id, current_user.id) %> <br/> <br/>
+  <p> If this company is not yours, go back to the previous page to find the correct one </p>
+  <%= link_to 'Back', companies_path %>
+<%end%>
+
+<% if @company.administrator==current_user %>
+  <%= link_to 'Edit', edit_company_path(@company) %>
+  <%= link_to 'Destroy', @company, method: :delete, data: { confirm: 'Are you sure?' } %> <br/> <br/>
+  <strong>list of co-workers involved</strong>
+  <table style="width:80%">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Job title</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  <% @colleagues.each do |colleague| %>
+    <tr>
+      <td><%= colleague.first_name%></td>
+      <td><%= colleague.last_name%></td>
+      <td><%= colleague.company_job_title%></td>
+      <td><%= colleague.email%></td>
+      <% if colleague.company_validation == "validated" %>
+        <td> Validated </td>
+      <% else %>
+        <td> Request access </td>
+        <td>
+        <%= form_for(colleague, url: company_user_path(@company, colleague)) do |f| %>
+          <%= f.submit "Validate" %>
+        <% end %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+  </table>
+<%end%>
+
+
+

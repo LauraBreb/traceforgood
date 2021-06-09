@@ -35,11 +35,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name
       t.string :mobile_phone
-      t.string :company_name
-      t.string :company_proof
-      t.string :company_type
-      t.string :company_department
-      t.string :company_position
+      t.string :company_job_title
+      t.string :company_validation
+      t.belongs_to :company
 
       t.timestamps null: false
     end

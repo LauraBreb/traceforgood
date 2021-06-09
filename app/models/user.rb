@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  belongs_to :company, optional: true 
+  has_one :administrated_company, foreign_key: "administrator_id", class_name: "Company"
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -10,7 +13,7 @@ class User < ApplicationRecord
     presence: true,
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "enter a valid email address" }
-  validates :password, :first_name, :last_name, :mobile_phone, :company_name, :company_proof, :company_type,  presence: true
+  validates :password, presence: true
 
 
   def welcome_send
