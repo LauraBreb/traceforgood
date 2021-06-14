@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<h2>Show</h2>
+
+<ul>
+  <% if current_user.company_id != nil%>
+    <li>
+      <%= link_to "Go to your company profile", company_path(@company.id) %>
+    </li>
+
+    <li>
+      <%= link_to "Edit admin settings", edit_user_registration_path %>
+    </li>
+
+    <li>
+      <%= link_to "Edit profile settings", edit_company_user_path(@company.id, current_user.id) %>
+    </li>
+  <% else %>
+    <p> Now you have joined your company you can complete your user profile </p>
+    <%= link_to 'Complete your user profile', edit_company_user_path(@company.id, current_user.id) %> <br/> <br/>
+  <%end%>
+</ul>

@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_06_08_073208) do
     t.string "last_name"
     t.string "mobile_phone"
     t.string "company_job_title"
-    t.string "company_validation"
     t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

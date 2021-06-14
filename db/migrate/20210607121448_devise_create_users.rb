@@ -36,7 +36,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :mobile_phone
       t.string :company_job_title
-      t.string :company_validation
       t.belongs_to :company
 
       t.timestamps null: false

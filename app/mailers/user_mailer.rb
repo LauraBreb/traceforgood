@@ -2,22 +2,22 @@ class UserMailer < ApplicationMailer
   default from: "laurabreb123@yopmail.com"
  
   def welcome_email(user)
-    #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
     @user = user 
-
-    #on définit une variable @url qu'on utilisera dans la view d’e-mail
-    @url  = 'http://traceforgood.herokuapp.com/users/sign_in' 
-
-    # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-    mail(to: @user.email, subject: '') 
+    @url_companies  = 'http://traceforgood.herokuapp.com/companies' 
+    mail(to: @user.email, subject: 'Welcome on Trace For Good') 
   end
 
   def new_registration_email(admin , user, company)
     @admin = admin
     @company = company
     @user = user
-
     mail(to: @admin.email, subject: "#{@user.first_name} #{@user.last_name} has joined #{@company.name} on the TraceForGood platform")
+  end
 
+  def update_profile_email(user)
+    @user = user
+    @url_product = 'http://traceforgood.herokuapp.com//static_pages/index'
+    @url_about = 'http://traceforgood.herokuapp.com//static_pages/index'
+    mail(to: @user.email, subject: "#{@user.first_name}, find out more about Trace For Good") 
   end
 end

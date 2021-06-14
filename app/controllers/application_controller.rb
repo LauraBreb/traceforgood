@@ -1,7 +1,15 @@
 class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
-    companies_path
+    if current_user.company_id != nil
+      static_pages_landing_page_path
+    else
+      companies_path
+    end
+  end
+
+  def after_update_path_for(resource)
+    user_path(resource)
   end
 
 end

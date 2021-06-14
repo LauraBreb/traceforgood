@@ -1,27 +1,23 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: [:index, :new]
+  before_action :user_can_create_company!, only: [:new, :create]
 
-  # GET /companies or /companies.json
   def index
     @companies = Company.all
   end
 
-  # GET /companies/1 or /companies/1.json
   def show
-    @company = Company.find(params[:id])
     @colleagues = @company.find_colleagues
   end
 
-  # GET /companies/new
   def new
     @company = Company.new
   end
 
-  # GET /companies/1/edit
   def edit
   end
 
-  # POST /companies or /companies.json
   def create
     @company = Company.new(company_params)
     @company.administrator_id = current_user.id
@@ -37,7 +33,6 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /companies/1 or /companies/1.json
   def update
     respond_to do |format|
       if @company.update(company_params)
@@ -50,7 +45,6 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # DELETE /companies/1 or /companies/1.json
   def destroy
     @company.destroy
     respond_to do |format|
@@ -60,13 +54,21 @@ class CompaniesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_company
       @company = Company.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def company_params
       params.require(:company).permit(:name, :proof, :category, :product_positioning, :customer_positioning, :market_positioning, :csr_maturity)
+    end
+
+    def user_can_create_company!
+      administrator_ids = Company.get_administrator_ids
+      if administrator_ids.include?(current_user.id) || current_user.company_id != nil
+        url = "/users/#{current_user.id}"
+        redirect_to url , flash: {notice: "You are already registered within a company!"}
+      else
+        return true
+      end
     end
 end
