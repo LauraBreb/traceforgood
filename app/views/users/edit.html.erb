@@ -1,31 +1,34 @@
-<h2>Edit</h2>
+<main class="form-signin">
+   <h1 class="h3 mb-3 fw-normal">Edit your profile</h1>
 
-<%= form_for(current_user, url: company_user_path) do |f| %>
+  <%= form_for(current_user, url: company_user_path) do |f| %>
   
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
-  </div>
+    <div class="form-floating">
+      <%= f.text_field :first_name, autofocus: true, class:"form-control edit-profile", id:"floatingInput" %>
+      <%= f.label :first_name, value:"First name" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name" %>
-  </div>
+    <div class="form-floating">
+      <%= f.text_field :last_name, autofocus: true, class:"form-control edit-profile", id:"floatingInput" %>
+      <%= f.label :last_name, value:"Last name" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :mobile_phone %><br />
-    <%= f.text_field :mobile_phone, autofocus: true, autocomplete: "mobile phone" %>
-  </div>
+    <div class="form-floating">
+      <%= f.text_field :mobile_phone, autofocus: true, class:"form-control edit-profile", id:"floatingInput" %>
+      <%= f.label :mobile_phone, value:"Mobile phone" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :company_job_title %><br />
-    <%= f.text_field :company_job_title, autofocus: true, autocomplete: "company position" %>
-  </div> <br />
+    <div class="form-floating">
+      <%= f.text_field :company_job_title, autofocus: true, class:"form-control edit-profile", id:"floatingInput" %>
+      <%= f.label :company_job_title, value:"Company position" %>
+    </div> <br />
 
-  <div class="actions">
-    <%= f.submit "Register my profile" %>
-  </div>
+    <div class="form-floating">
+      <%= f.submit "Register my profile", class:"w-100 btn btn-lg btn-secondary fw-bold border-white bg-white", style:"color:rgb(51,51,51); font-size:medium" %>
+    </div>
 
-<% end %>
+  <% end %>
 
-<%= link_to "Back", :back %>
+  <%= link_to "Back", :back %>
+  
+</main>

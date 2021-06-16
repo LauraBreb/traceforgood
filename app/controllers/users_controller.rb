@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_company_user, only: %i[ show]
   
   def edit
     @company = Company.find(params[:company_id])
@@ -25,5 +26,15 @@ class UsersController < ApplicationController
   def show
     company_id = current_user.company_id
     @company = Company.find(company_id)
+  end
+
+  private
+
+  def set_company_user
+    if current_user.company_id != nil
+      return true
+    else
+      redirect_back fallback_location: "/companies", flash: {notice: "Your registration is not yet complete !"}
+    end
   end
 end

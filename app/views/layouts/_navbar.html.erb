@@ -1,0 +1,29 @@
+  <header class="mb-auto">
+    <div>
+      <h3> <a class="float-md-start mb-0" href="/static_pages/landing_page">Trace For Good</a> </h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link active" aria-current="page" href="/static_pages/index">Solution</a>
+        <a class="nav-link" href="/static_pages/about">About</a>
+        <a class="nav-link" href="/static_pages/team">Team</a>
+        <div class="dropdown">
+          <% if user_signed_in? %>
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              My session
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to "My profile", user_path(current_user.id), class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method:"delete", :data => {:confirm => "Êtes-vous sûrs de vouloir vous déconnecter ?"}%>
+            </div>
+          <% else %>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Log in / Sign up
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <%= link_to "Log in", new_user_session_path, class: "dropdown-item", type: "submit" %>
+              <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item", type: "submit" %>
+            </div>
+          <% end %>
+        </div>
+      </nav>
+    </div>
+  </header>

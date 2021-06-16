@@ -21,7 +21,7 @@ class User < ApplicationRecord
   end
 
   def admin_user_notification
-    AdminMailer.new_user_registration.deliver_now
+    AdminMailer.new_user_registration(self).deliver_now
   end
 
 end
