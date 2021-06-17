@@ -11,50 +11,67 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name, "Company Name" %>
-    <%= form.text_field :name %>
-  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3 company-form">
+        <%= form.label :name, "Company name"%>
+        <%= form.text_field :name, class:"form-control" %>
+      </div>
 
-  <div class="field">
-    <%= form.label :proof, "Company check"%>
-    <i>Siren number, company website or linkedin link</i><br/>
-    <%= form.text_field :proof %>
-  </div>
+      <div class="mb-3 company-form">
+        <%= form.label :proof, "Company check"%><span class="text-muted"> (Siren number, company website or linkedin link)</span>
+        <%= form.text_field :proof, class:"form-control" %>  
+      </div>
 
-  <div class="field">
-    <%= form.label :category, "Company category" %>
-    <%= form.select :category,["Select the most relevent category", "Brand", "Textile supply chain player", "CSR 3rd party tool or application", "Other brand supplier (e.g. logistic, packaging)", "Other"]%>
-  </div>
+      <div class="row company-form">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <%= form.label :category, "Company category"%> <br/>
+            <%= form.select :category,["Select the most relevent option", "Brand", "Textile supply chain player", "CSR tool or application", "Logistic or packaging player", "Other"], {}, {class: 'form-control'}%>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3 company-form">
+            <%= form.label :product_positioning %><br/>
+            <%= form.select :product_positioning, ["Select the most relevent option","Entry-level", "Mid-range", "Premium", "Luxury"],{}, {class: 'form-control'} %>
+          </div>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :product_positioning %>
-    <%= form.select :product_positioning, ["Select the most relevent option","Entry-level", "Mid-range", "Premium", "Luxury"] %>
-  </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3 company-form">
+            <%= form.label :customer_positioning %><br/>
+            <%= form.select :customer_positioning, ["Select the most relevent option","Women", "Men", "Mixed", "Children", "Home"],{}, {class: 'form-control'}%>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3 company-form">
+            <%= form.label :market_positioning %><br/>
+            <%= form.select :market_positioning, ["Select the most relevent option", "Mainly in France","Mainly in Europe","International"], {}, {class: 'form-control'}%>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :customer_positioning %>
-    <%= form.select :customer_positioning, ["Select the most relevent option","Women", "Men", "Mixed", "Children", "Home"]%>
-  </div>
+    <div class="col-md-6">
+      <div class="mb-3 company-form">
+        <span> CSR maturity </span>
+        <div class="form-check">
+          <%= form.radio_button :csr_maturity, "Beginner", {class:"form-check-input"}%> 
+          <%= form.label :csr_maturity_beginner, "Beginner",{class:"form-check-label"} %> <br/> <small class="text-muted">(CSR is a new concept. The company is not involved or only through sponsorship, and communicates little or not at all.)</small> <br/>
+          <%= form.radio_button :csr_maturity, "Committed", {class:"form-check-input"} %>
+          <%= form.label :csr_maturity_beginner, "Committed",{class:"form-check-label"}%><br/> <small class="text-muted">(The company is aware of its major CSR challenges and has a dedicated action plan.)</small> <br/>
+          <%= form.radio_button :csr_maturity, "Convinced", {class:"form-check-input"} %>
+          <%= form.label :csr_maturity_beginner, "Convinced",{class:"form-check-label"}%><br/> <small class="text-muted">(The company has a very good visibility on its CSR issues with a solid action plan and its employees have been made aware of them.)</small> <br/>
+          <%= form.radio_button :csr_maturity, "Advanced", {class:"form-check-input"} %>
+          <%= form.label :csr_maturity_beginner, "Advanced",{class:"form-check-label"}%><br/> <small class="text-muted">(CSR is at the heart of value chain management and is the subject of a demanding programme. CSR is an integral part of the brand's positioning.)</small>
+        </div>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :market_positioning %>
-    <%= form.select :market_positioning, ["Select the most relevent option", "Mainly in France","Mainly in Europe","International"] %>
-  </div>
+    <div class="actions">
+      <%= form.submit "Update company profile", class:"btn btn-lg btn-secondary fw-bold border-white bg-white", style:"color:rgb(51,51,51); font-size:medium"%>
+    </div>
 
-  <div class="field">
-    <%= form.label :csr_maturity, "CSR maturity" %>
-    <%= form.radio_button :csr_maturity, "Beginner"%> 
-    <%= form.label :csr_maturity_beginner, "Beginner: CSR is a new concept. The company is not involved or only through sponsorship, and communicates little or not at all.",:style =>"display:inline"%> <br/>
-    <%= form.radio_button :csr_maturity, "Committed" %>
-    <%= form.label :csr_maturity_beginner, "Committed: The company is aware of its major CSR challenges and has a dedicated action plan. It communicates sporadically on CSR without visibility on the impact.",:style =>"display:inline"%><br/>
-    <%= form.radio_button :csr_maturity, "Convinced" %>
-    <%= form.label :csr_maturity_beginner, "Convinced: The company has a very good visibility on its CSR issues and its employees have been made aware of them. With a solid action plan, CSR is an important part of its communication.",:style =>"display:inline"%><br/>
-    <%= form.radio_button :csr_maturity, "Advanced" %>
-    <%= form.label :csr_maturity_beginner, "Advanced: CSR is at the heart of value chain management and is the subject of a demanding programme. CSR is an integral part of the brand's positioning and permeates all forms of communication. Managers are comfortable speaking publicly about CSR.",:style =>"display:inline"%>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

@@ -8,6 +8,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @user = User.find(@company.administrator_id)
     @colleagues = @company.find_colleagues
   end
 

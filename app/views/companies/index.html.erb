@@ -1,16 +1,28 @@
-<p id="notice"><%= notice %></p>
+<main>
+    <p id="notice"><%= notice %></p>
 
-<h1>Join or Register your company</h1>
-<i>To complete your registration you first need to join or register a company</i>
-
-
-<p> Create a company profile </p>
-<%= link_to 'Register a new company', new_company_path %> <br/>
- 
-<p> Join a registered company </p>
-
-<% @companies.each do |company| %>
-    <strong><%= company.name %></strong>
-    <%= link_to 'Join', company, :style =>"display:inline"%> <br/>
-<% end %>
+    <div class="jumbotron">
+    <h1 class="h3 mb-3 fw-normal">Join or Register your company</h1>
+    <p class="lead">To complete your registration you first need to join or register a company !</p>
+    <hr class="my-4">
+    <p>Your are the first of your company to join the platform?</p>
+    <p class="lead">
+        <%= link_to 'Register a new company', new_company_path, class:"w-20 btn btn-lg btn-secondary fw-bold border-white bg-white", style:"color:rgb(51,51,51); font-size:medium" %> <br/>
+    </p>
+    <hr class="my-4">
+    <p>Your company has already been registered? Select yours in the list below!</p>
+    <p class="lead">
+        <div class="row company-card">
+            <% @companies.each do |company| %>
+                <div class="card col-md-2">
+                    <div class="card-body">
+                        <p class="card-title"><%= company.name %></p>
+                        <%= link_to 'Join this company', company, class:"btn btn-outline-secondary btn-sm", style:" font-size:medium" %> <br/>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </p>
+    </div>
+</main>
 

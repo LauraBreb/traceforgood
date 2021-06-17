@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
       static_pages_landing_page_path
     else
       companies_path
+      # flash[:notice] = "To complete your registration you first need to join or register a company"
     end
   end
 

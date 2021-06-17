@@ -1,6 +1,8 @@
-<h1>Editing Company</h1>
+<main class="form-company">
+  <h1 class="h3 mb-3 fw-normal">Edit company profile</h1>
 
-<%= render 'form', company: @company %>
+  <%= render 'form', company: @company %>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+  <%= link_to 'Company profile', @company %>
+  <%= link_to 'Back', companies_path %>
+</main>
