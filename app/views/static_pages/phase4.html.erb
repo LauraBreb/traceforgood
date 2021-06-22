@@ -1,2 +1,38 @@
-<h1>StaticPages#phase4</h1>
-<p>Find me in app/views/static_pages/phase4.html.erb</p>
+<main>
+  <%= render 'jumbotron_solution_overview'%>
+
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active " href="static_pages/phase1"><i class="fa fa-cloud-download"></i> Gather brand inputs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="static_pages/phase2"><i class="fa fa-search" aria-hidden="true"></i> Trace back operations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="static_pages/phase3"><i class="fa fa-heartbeat" aria-hidden="true"></i> Analyse CSR performance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="static_pages/phase4"><i class="fa fa-share-square-o" aria-hidden="true"></i> Leverage tracability outputs</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Step 1 - Gather brand inputs</h5>
+      <p class="card-text">
+        <i class="fa fa-search-plus" aria-hidden="true"></i>
+        Define the scope : which level of granularity ? which items ?
+      </p>
+      <p class="card-text">
+        <i class="fa fa-search-plus" aria-hidden="true"></i>
+        Validate the framework of product data collection
+      </p>
+      <p class="card-text">
+        <i class="fa fa-search-plus" aria-hidden="true"></i>
+        Onboard key stakeholders on the platform and use the data collection tools to gather product tracability internal inputs
+      </p>
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i><%= link_to "Go to step 2 - Trace back operations", static_pages_phase2_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</main>
