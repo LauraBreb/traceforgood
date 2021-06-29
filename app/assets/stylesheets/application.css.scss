@@ -15,8 +15,251 @@
  @import "bootstrap";
  @import "font-awesome";
 
- .pagination {
- justify-content: center;
+ /* dashboard */
+
+ .li-dashboard {
+  display: block;
+  padding: 0.5rem 0.2rem;
+ }
+
+ h6.li-dashboard {
+  margin-bottom: 0;
+  margin-top: 1rem;
+ }
+
+
+.col-2.side-dashboard {
+  border-right-style: solid;
+  border-right-color:white;
+  border-right-width: 1px;
+  text-align: left;
+  text-shadow: none;
+  text-align: left;
+  font-size:small;
+}
+
+
+@media (max-width: 767.98px) {
+  .col-2.side-dashboard {
+    min-width: 120px;
+  }
+}
+
+.nav-link.li-dashboard {
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-link {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.nav-link.active.li-dashboard {
+  color: #007bff;
+}
+
+.nav-link.li-dashboard:hover,.nav-link.nav-link.active.li-dashboard{
+  color: inherit;
+}
+
+/* core dashboard */
+
+.dashboard-molecule-1, .dashboard-molecule-2, .dashboard-molecule-3 {
+  background-color: rgba(250,250,250, 0.2);
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.dashboard-molecule-1 {
+  border-top-left-radius: 20px;
+}
+
+.dashboard-molecule-2 {
+  border-bottom-right-radius: 20px;
+}
+
+.dashboard-molecule-3 {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.dashboard-molecule-3.phase1 {
+  height: 91.4%;
+}
+.dashboard-molecule-3.phase2 {
+  height: 93.2%;
+}
+
+.col-6.core-dashboard-title, .col-4.core-dashboard-title, .col-3.core-dashboard-title {
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: none;
+  padding: none;
+}
+
+p.core-dashboard-title {
+ margin-bottom: 0;
+ font-weight: bold;
+}
+
+.col-6.core-dashboard, .col-4.core-dashboard {
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   text-shadow: none;
 }
- 
+
+.column.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: none;
+  margin:none;
+  height: 100%;
+}
+.row.dashboard-all, .row.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin:none;
+}
+
+.row.dashboard-all {
+  margin-top: 0.7rem;
+  text-shadow: none;
+}
+
+
+.col-3.core-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: small;
+  text-shadow: none;
+  padding: 5px 5px;
+}
+
+.fa-envelope-open-o:hover {
+  color: #007bff;
+}
+
+.fa-3x {
+  margin-top: 0.2rem;
+}
+
+.send-reminder {
+  margin-bottom: 0.5rem;
+}
+.progress, .progress-subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.progress-title {
+  font-weight: bold;
+  text-shadow: none;
+  font-size: small;
+}
+
+.progress.multiple {
+  margin: 0.5rem 0.5rem;
+}
+
+.btn {
+  border-style: none;
+}
+
+/* tracability card */
+
+.col-10.trace-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row.trace-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0rem;
+}
+
+.col-5.trace-card, .col-6.trace-card, .col-7.trace-card   {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.level-1-1,.level-1-2,.level-1-3 {
+  background-color: rgba(250,250,250, 0.2);
+}
+
+.level-1-1 {
+  border-top-left-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.level-1-3 {
+  border-bottom-right-radius: 20px;
+  margin-top: 1rem;
+}
+
+.categ-profil, .var-pdt{
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.input-group-sm {
+  margin-left: 0%;
+  margin-right: 0%;
+  font-size:smaller;
+  padding:none;
+}
+
+.input-group-sm.var-pdt {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.input-group-text.optional {
+  color:darkgray;
+}
+
+.trace-card-title {
+  font-weight: bold;
+  text-shadow: none;
+  font-size: small;
+}
+
+.table.trace-card {
+  text-align: left;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.form-select.var-pdt, .form-control.var-pdt {
+  border-style: none;
+  font-size:small;
+  color: white;
+  height: 30px;
+  background-color:transparent;
+}
+
+.form-select.compo, .form-control.compo {
+  border-style: none;
+  font-size:small;
+  color: white;
+  height: 30px;
+  padding: 0;
+  background-color:transparent;
+}

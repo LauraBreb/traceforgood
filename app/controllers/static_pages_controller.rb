@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :authenticate_user!, :user_registration_completed?, except: [:landing_page, :about, :team, :contact]
+  before_action :authenticate_user!, :user_registration_completed?, except: [:landing_page, :index, :about, :team, :contact]
   
   def landing_page
   end
@@ -16,9 +16,6 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def phase0
-  end
-
   def phase1
   end
 
@@ -29,6 +26,21 @@ class StaticPagesController < ApplicationController
   end
 
   def phase4
+  end
+
+  def dashboard_phase1
+  end
+
+  def dashboard_phase2
+  end
+
+  def dashboard_phase3
+  end
+
+  def traceability_card_product
+  end
+
+  def traceability_card_brand
   end
 
   private

@@ -23,11 +23,15 @@ Rails.application.routes.draw do
   get 'static_pages/team'
   get 'static_pages/contact'
   get 'static_pages/index'
-  get 'static_pages/phase0'
   get 'static_pages/phase1'
   get 'static_pages/phase2'
   get 'static_pages/phase3'
   get 'static_pages/phase4'
+  get 'static_pages/dashboard_phase1'
+  get 'static_pages/dashboard_phase2'
+  get 'static_pages/dashboard_phase3'
+  get 'static_pages/traceability_card_product'
+  get 'static_pages/traceability_card_brand'
   root 'static_pages#landing_page'
 
 end

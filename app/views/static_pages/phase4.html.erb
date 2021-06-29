@@ -1,38 +1,41 @@
-<main>
-  <%= render 'jumbotron_solution_overview'%>
+</main >
+  <header class="masthead mb-auto">
+    <div class="inner-solution">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="../static_pages/phase1">Collect brand data</a>
+        <a class="nav-link" href="../static_pages/phase2">Trace back operations</a>
+        <a class="nav-link" href="../static_pages/phase3">Analyze CSR performance</a>
+        <a class="nav-link active" href="../static_pages/phase4">Leverage traceability outputs</a>
+      </nav>
+    </div>
+    <hr class="my-4">
+  </header>
 
-  <div class="card text-center">
-    <div class="card-header">
-      <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link active " href="static_pages/phase1"><i class="fa fa-cloud-download"></i> Gather brand inputs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="static_pages/phase2"><i class="fa fa-search" aria-hidden="true"></i> Trace back operations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="static_pages/phase3"><i class="fa fa-heartbeat" aria-hidden="true"></i> Analyse CSR performance</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="static_pages/phase4"><i class="fa fa-share-square-o" aria-hidden="true"></i> Leverage tracability outputs</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Step 1 - Gather brand inputs</h5>
-      <p class="card-text">
-        <i class="fa fa-search-plus" aria-hidden="true"></i>
-        Define the scope : which level of granularity ? which items ?
-      </p>
-      <p class="card-text">
-        <i class="fa fa-search-plus" aria-hidden="true"></i>
-        Validate the framework of product data collection
-      </p>
-      <p class="card-text">
-        <i class="fa fa-search-plus" aria-hidden="true"></i>
-        Onboard key stakeholders on the platform and use the data collection tools to gather product tracability internal inputs
-      </p>
-      <i class="fa fa-angle-double-right" aria-hidden="true"></i><%= link_to "Go to step 2 - Trace back operations", static_pages_phase2_path, class:"btn btn-primary" %>
-    </div>
+  <div class="container marketing">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Communicate to final consumer</h2>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Select template of transparency card</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Modify and validate content</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Download ready-to-plug cards</p><br/>
+            <p><a class="btn btn-secondary" href="#" role="button">Download "transparency card" templates examples</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Transform data for CSR forms</h2>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Upload forms to be completed</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Receive filled-in forms</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Generate updates</p><br/>
+            <p><a class="btn btn-secondary" href="#" role="button">Access company forms request interface &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Find relevant CSR partners</h2>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Define your need and your profile</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Get a list of CSR partners referenced in the platform</p>
+            <p><i class="fa fa-check" aria-hidden="true"></i> Contact them through the platform and keep track of communications</p>
+            <p><a class="btn btn-secondary" href="#" role="button">Coming soon - working hard on it</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
   </div>
 </main>

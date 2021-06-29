@@ -16,5 +16,3 @@
 //= require popper
 //= require bootstrap
 //= require main
-
-
