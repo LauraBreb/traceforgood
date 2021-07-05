@@ -43,6 +43,20 @@ class StaticPagesController < ApplicationController
   def traceability_card_brand
   end
 
+  def materials
+  end
+
+  def accessories
+  end
+
+  def internalized_operations
+  end
+
+  def externalized_operations
+  end
+
+  def packaging_logistic
+
   private
 
   def user_registration_completed?

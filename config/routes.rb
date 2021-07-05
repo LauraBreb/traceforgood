@@ -32,6 +32,12 @@ Rails.application.routes.draw do
   get 'static_pages/dashboard_phase3'
   get 'static_pages/traceability_card_product'
   get 'static_pages/traceability_card_brand'
+  get 'static_pages/traceability_card_brand/overview'
+  get 'static_pages/traceability_card_brand/materials'
+  get 'static_pages/traceability_card_brand/accessories'
+  get 'static_pages/traceability_card_brand/internalized_operations'
+  get 'static_pages/traceability_card_brand/externalized_operations'
+  get 'static_pages/traceability_card_brand/packaging_logistic'
   root 'static_pages#landing_page'
 
 end
