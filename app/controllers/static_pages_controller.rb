@@ -56,6 +56,8 @@ class StaticPagesController < ApplicationController
   end
 
   def packaging_logistic
+    
+  end
 
   private
 
