@@ -1,23 +1,22 @@
 <main>
   <p id="notice"><%= notice %></p>
-  <p class="h3 mb-3 fw-normal">Company profile</p>
-  <p class="h4 mb-3 fw-normal"><%= @company.name %></p>
 
   <% if current_user.company_id == nil %>
+    <h1 class="h3 mb-3 fw-normal"><span class="outstanding-word">Join</span> <%= @company.name %></h1>
     <div class="jumbotron">
       <hr class="my-4">
       <p>Now you have joined your company you can complete your user profile</p>
       <p class="lead">
-        <%= link_to 'Complete your user profile', edit_company_user_path(@company.id, current_user.id), class:"w-20 btn btn-lg btn-secondary fw-bold border-white bg-white", style:"color:rgb(51,51,51); font-size:medium" %> <br/>
+        <%= link_to 'Complete your user profile', edit_company_user_path(@company.id, current_user.id), class:"w-20 btn btn-secondary"%> <br/>
       </p>
       <hr class="my-4">
       <p>If this company is not yours, go back to the previous page to find the correct one</p>
-      <p class="lead">
-        <%= link_to 'Back', companies_path, class:"w-20 btn btn-lg btn-secondary fw-bold border-white bg-white", style:"color:rgb(51,51,51); font-size:medium" %> <br/>
-      </p>
+      <%= link_to 'Back', companies_path %>
     </div>
 
   <% else %>
+    <p class="h3 mb-3 fw-normal">Company profile</p>
+    <p class="h4 mb-3 fw-normal"><%= @company.name %></p>
         <div class="my-3 p-3 bg-white rounded box-shadow">
           <h6 class="border-bottom border-gray pb-2 mb-0">Company informations</h6>
           <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
@@ -73,11 +72,14 @@
             </table>
           </div>
           <% if @company.administrator==current_user %>
-            <small class="d-block text-right mt-3">
+            <small class="d-block mt-3">
               <%= link_to 'Edit company profile', edit_company_path(@company) %> /
               <%= link_to 'Delete company', @company, method: :delete, data: { confirm: 'Are you sure?' } %>
             </small>
           <% end %>
+        </div>
+        <div class="lead">
+          <a class="w-20 btn btn-secondary" href="/static_pages/index">Discocer the solution</a>
         </div>
   <% end %>
 </main>

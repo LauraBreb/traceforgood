@@ -1,11 +1,10 @@
-  <header class="mb-auto">
-    <div>
-      <h3> <a class="float-md-start mb-0" href="/static_pages/landing_page">Trace For Good</a> </h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="/static_pages/index">Solution</a>
+  <header class="mb-auto fixed-top">
+    <div class=" mb-2 mt-2">
+      <a class="float-md-start" href="/static_pages/landing_page"><%= image_tag "logo-traceforgood-noirvert-fondtransparent.png"%></a>
+      <nav id="navbar_top" class="nav nav-masthead justify-content-center float-md-end mb-2">
+        <a class="nav-link" aria-current="page" href="/static_pages/index">Solution</a>
         <a class="nav-link" href="/static_pages/about">About</a>
         <a class="nav-link" href="/static_pages/team">Team</a>
-        <div class="dropdown">
           <% if user_signed_in? %>
             <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               My session
@@ -23,7 +22,6 @@
               <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item", type: "submit" %>
             </div>
           <% end %>
-        </div>
       </nav>
     </div>
   </header>

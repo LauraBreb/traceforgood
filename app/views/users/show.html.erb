@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 <main>
   <h1 class="h3 mb-3 fw-normal" width="50%">My profile</h1>
 
@@ -36,18 +36,28 @@
           <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <div class="d-flex justify-content-between align-items-center w-100">
               <strong class="text-gray-dark">Company</strong>
-              <%= link_to "Company profile", company_path(@company.id) %>
             </div>
             <span class="d-block"><%= @company.name %></span>
           </div>
           <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <div class="d-flex justify-content-between align-items-center w-100">
-              <strong class="text-gray-dark">Company position</strong>
+              <strong class="text-gray-dark">Company Position</strong>
               <%= link_to "Edit", edit_company_user_path(@company.id, current_user.id) %>
             </div>
             <span class="d-block"><%= current_user.company_job_title %></span>
           </div>
         </div>
+
+        <div class="lead">
+          <%= link_to "Go to your Company profile", company_path(@company.id), class:"btn btn-secondary" %>
+        </div><br />
+
+        <div class="lead">
+          <a class="w-20 btn btn-secondary" href="/static_pages/index">Discocer the solution</a>
+        </div>
+
+
+
   <% else %>
     <p> Now you have joined your company you can complete your user profile </p>
     <%= link_to 'Complete my user profile', edit_company_user_path(@company.id, current_user.id) %> <br/> <br/>
