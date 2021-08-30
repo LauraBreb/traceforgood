@@ -1,1 +1,23 @@
-<h1>StaticPages#about</h1>
+<main>
+    <div class="container">
+      <div class="about">
+        <p>The fashion value chain is complex and opaque and providing consumers with guarantees of sustainability will require more product transparency. While brands are increasingly committing to operate more responsibly, measuring the impact of these actions in a comparable, standardised and granular way is not currently possible. Giving consumers next level transparency on the products they buy and wear is not nearly achievable today.</p>
+
+        <p>Transparency will come with traceability, which first requires more collaboration between stakeholders - brands, suppliers, certification providers, investors - and tools that will make data aggregation and sharing seamless and reliable.</p>
+     
+        <p>We believe the fashion value chain and its different players need a third party operating a secured tool. It will act as a bridge between many data sources and will connect brands to all their partners in order to facilitate collaboration and erase supply chain opacity. This third party will also preserve the confidentiality suppliers strategically require, which currently hinders transparency.</p>
+    
+        <p>Trace For Good is a platform that allows you to collect your spread out data, keep it updated and leverage it in the ESG ecosystem we are building. Our mission is to set up the foundation for ambitious ESG transformations by creating better supply chain traceability.</p>
+    
+        <p>We offer pragmatic tools to turn brand’s sustainability ambitions into measurable actions.</p>
+      </div>
+      <br/>
+      <p class="lead">
+        <% if user_signed_in? %>
+          <a href="/static_pages/index" class="btn btn-secondary">Discover our solution</a>
+        <% else %>
+          <a href="/users/sign_up" class="btn btn-secondary">Sign up to access the Beta version for free </a>
+        <% end %>
+      </p>
+    </div>
+</main>

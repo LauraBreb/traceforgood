@@ -171,6 +171,17 @@ select option:hover {
   margin-top: 5em;
 }
 
+/* about */
+.container {
+  align-items: center;
+}
+
+.about {
+  margin-top: 5em;
+  text-align: center;
+  font-size: large;
+}
+
 /* User forms */
 
 .form-floating {
@@ -211,60 +222,17 @@ select option:hover {
   margin-top: 5em;
   margin-bottom: auto;
 }
- /** carousel **/
-
- .carousel-body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  color:#21211f;
-}
-
-.carousel {
-  margin-bottom: 4rem;
-  background-color: #739987;
-}
-
-.carousel-indicators .active {
-  background-color:#c42e99;
-}
-
-.carousel-indicators li {
-position: relative;
--webkit-box-flex: 0;
--ms-flex: 0 1 auto;
-flex: 0 1 auto;
-width: 30px;
-height: 3px;
-margin-right: 3px;
-margin-left: 3px;
-text-indent: -999px;
-background-color:#fff9fa;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-  color:#fff9fa;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 20rem;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 20rem;
-}
-
+ 
 /** column **/
 
 .marketing .col-lg-3 {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   text-align: center;
+}
+
+.detailed-solution {
+  text-align: left;
 }
 
 
