@@ -178,8 +178,33 @@ select option:hover {
 
 .about {
   margin-top: 5em;
-  text-align: center;
+  margin-left: 8em;
+  margin-right: 8em;
+  text-align: left;
   font-size: large;
+}
+
+@media (max-width: 62em) {
+  .about {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 5em;
+  }
+}
+
+@media (max-width: 48em) {
+  .about {
+    margin-top: 7em;
+  }
+}
+
+/* team */
+.team-img {
+  border-bottom: 2px solid #21211f;
+}
+
+.team-text {
+  text-align: left;
 }
 
 /* User forms */
