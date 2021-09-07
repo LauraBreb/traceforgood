@@ -98,8 +98,8 @@ Rails.application.configure do
     port:                 587,
     domain:               'gmail.com',
     authentication:       'login',
-    user_name:            'laura.traceforgood@gmail.com',
-    password:             'pass',
+    user_name: ENV["MAILER_EMAIL"],
+    password: ENV["MAILER_PASSWORD"]
     enable_starttls_auto: true  }
   config.action_mailer.perform_deliveries = true
   
