@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :authenticate_user!, :user_registration_completed?, except: [:landing_page, :index, :about, :team, :contact]
+  before_action :authenticate_user!, :user_registration_completed?, except: [:landing_page, :index, :about, :team, :contact, :free_form]
   
   def landing_page
   end

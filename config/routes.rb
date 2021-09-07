@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'static_pages/team'
   get 'static_pages/contact'
   get 'static_pages/index'
+  get 'static_pages/free_form'
   get 'static_pages/phase1'
   get 'static_pages/phase2'
   get 'static_pages/phase3'

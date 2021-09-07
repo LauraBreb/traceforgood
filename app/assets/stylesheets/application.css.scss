@@ -43,9 +43,17 @@ body {
   color: #21211f;
 }
 
+main {
+  margin-top: 5em;
+}
+
 a {
   color: #6129eb;
   text-decoration: underline;
+}
+
+td {
+  color: #21211f;
 }
 
 /* messages */ 
@@ -63,17 +71,20 @@ a {
 .btn-primary, .btn-secondary {
   text-shadow: none;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 .btn-primary {
-  background-color:#739987;
+  background-color: #fff9fa;
   color: #21211f;
+  border: 2px solid #739987 ;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color:#c42e99;
-  color: #fff9fa;
+  background-color:#739987;
+  color: #21211f;
+  border: #739987;
 }
 
 .btn-secondary {
@@ -154,17 +165,6 @@ footer {
   background-color: #739987;
 }
 
-/* Company forms */
-select {
-  outline: none;
-  background-color: white!important;
-}
-
-select option:checked,
-select option:hover {
-  background: white !important;;
-}
-
 /* landing page */
 
 .landing-title {
@@ -177,7 +177,6 @@ select option:hover {
 }
 
 .about {
-  margin-top: 5em;
   margin-left: 8em;
   margin-right: 8em;
   text-align: left;
@@ -207,6 +206,17 @@ select option:hover {
   text-align: left;
 }
 
+/* Company forms */
+select {
+  outline: none;
+  background-color: white!important;
+}
+
+select option:checked,
+select option:hover {
+  background: white !important;;
+}
+
 /* User forms */
 
 .form-floating {
@@ -222,7 +232,7 @@ select option:hover {
   width: 100%;
   max-width: 330px;
   padding: 15px;
-  margin: auto;
+  align-self: center;
 }
 
 .form-signin .checkbox {
@@ -241,10 +251,13 @@ select option:hover {
   margin-bottom: 10px;
 }
 
+.lead {
+  margin-bottom: 0.5em;
+}
+
  /* solution */
 
  .container.solution {
-  margin-top: 5em;
   margin-bottom: auto;
 }
  
@@ -282,6 +295,7 @@ select option:hover {
 
 .hr-theme-slash-2 {
   display: flex;
+  margin-bottom: 2em;
 
   .hr-line {
     width: 100%;
@@ -290,29 +304,6 @@ select option:hover {
     border-bottom: 1px solid #21211f;
   }
 
-}
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
 }
 
 /* solution focus by phases */
@@ -342,8 +333,6 @@ margin-top: 5em;
   margin-top: 2em;
   margin-bottom: auto;
 }
-
-
 
 /* dashboard */
 
@@ -505,7 +494,7 @@ p.core-dashboard-title {
   border-style: none;
 }
 
-/* tracability card */
+/* traceability card */
 
 .col-10.trace-card {
   display: flex;

@@ -1,11 +1,15 @@
 </main>
-    <h1 class="landing-title">Sustainable fashion starts with value chain <span class="outstanding-word">transparency</span>.</h1></br>
+    <h1 class="landing-title">Sustainable fashion starts with value chain <span class="outstanding-word">transparency</span>.</h1><br/>
     <p class="lead">Trace For Good is the <span class="outstanding-expression">collaborative platform for traceability</span> in fashion allowing brands to structure their ESG transformation </br>by centralizing and analyzing <span class="outstanding-expression">product data.</span></p></br>
     <p class="lead">
       <% if user_signed_in? %>
         <a href="/static_pages/index" class="btn btn-secondary">Discover our solution</a>
       <% else %>
-        <a href="/users/sign_up" class="btn btn-secondary">Sign up to access the Beta version for free </a>
+        <a href="/users/sign_up" class="btn btn-secondary">Sign up to access the Beta version</a><br/><br/>
+        <small class="mb-5 fw-normal">Not ready to sign up? Get first insights and product overview for free.</small>
+        <div> 
+          <a href="/static_pages/free_form" class="btn-sm btn-primary">French version</a>
+        </div>
       <% end %>
     </p>
 </main>
