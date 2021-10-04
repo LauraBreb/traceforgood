@@ -17,7 +17,7 @@ class UserMailer < ApplicationMailer
   def update_profile_email(user)
     @user = user
     @url_product = 'http://traceforgood.herokuapp.com//static_pages/index'
-    @url_about = 'http://traceforgood.herokuapp.com//static_pages/index'
+    @url_about = 'http://traceforgood.herokuapp.com//static_pages/about'
     mail(to: @user.email, subject: "#{@user.first_name}, find out more about Trace For Good") 
   end
 end
